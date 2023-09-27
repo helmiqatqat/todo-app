@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal&display=swap");
+
+.settings-body {
+    //   background-color: cadetblue;
+  
+    height: 85vh;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+.settings-header {
+    background-color: rgb(52, 58, 64);
+    color: rgb(255, 255, 255);
+    font-family: "Metal", cursive;
+    font-size: 42px;
+    padding: 22px 24px;
+  }
+
+  
+  .settings-sections {
+    height: 80vh;
+    display: flex;
+
+    .settings-form {
+    
+      width: 25vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4vh;
+      font-size: 22px;
+      margin: 0 30px;
+      padding: 6vh 3vw;
+
+      border: 1px solid rgb(222, 222, 222);
+      border-radius: 10px;
+
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      span{
+      font-size: 22px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+
+      }
+      input {
+        height: 44px;
+        width: 20vw;
+        border: 1px solid rgb(222, 222, 222);
+        border-radius: 10px;
+        margin: 10px 0;
+        padding: 0 10px;
+      }
+
+      input::placeholder {
+        padding: 10px;
+      }
+
+      h2 {
+        font-weight: 800;
+        font-size: 30px;
+      }
+    }
+  }
+}
