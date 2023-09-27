@@ -1,0 +1,60 @@
+.main-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.main-container header h1{
+  background-color: #13084a;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tasks-container {
+  display: flex;
+  gap: 10px;
+}
+.tasks-container label {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+.add-form {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  padding: 20px;
+  min-width: 33%;
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: fit-content;
+}
+.add-form h2 {
+  align-self: left;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.add-form [type='text'] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.add-form input:focus {
+  outline: 0;
+  border-color: #228be6;
+}
+.add-form button {
+  background-color: #228be6;
+  color: white;
+  padding: 15px 20px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 0;
+  font-weight: bold;
+}
+.add-form button:hover {
+  cursor: pointer;
+}
