@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import cookie from "react-cookies";
 import jwt_decode from "jwt-decode";
+import superagent from "superagent";
+import base64 from "base-64";
 
 const testUsers = {
   Admininistrator: {
@@ -36,11 +38,20 @@ const LoginProvider = (props) => {
   const [token, setToken] = useState("");
   const [user, setUser] = useState({ capabilities: [] });
   const [error, setError] = useState(null);
+  const [showSignup, setShowSignup] = useState(false);
+
   const can = (capability) => {
     return state?.user?.capabilities?.includes(capability);
   };
 
   const login = async (username, password) => {
+    const data = await superagent
+      .post(`http://localhost:3005/signin`)
+      .set(
+        "authorization",
+        `Basic ${base64.encode(`${username}:${password}`)}`
+      );
+    console.log(data.body.user.username);
     let auth = testUsers[username];
     if (auth && auth.password === password) {
       try {
@@ -82,6 +93,8 @@ const LoginProvider = (props) => {
     user: user,
     token: token,
     error: error,
+    setShowSignup: setShowSignup,
+    showSignup: showSignup,
   };
 
   useEffect(() => {
