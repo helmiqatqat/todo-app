@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
 import './index.css'
-import useForm from "../../hooks/form.js";
 import List from "../List/index.js";
 import { v4 as uuid } from "uuid";
 import { SettingsContext } from "../../context/Settings";
@@ -12,14 +11,29 @@ const ToDo = () => {
   const [difficulty, setDifficulty] = settings.difficulty;
   const [list, setList] = useState([]);
   const [incomplete, setIncomplete] = useState([]);
-  const {handleChange, handleSubmit } = useForm(addItem, difficulty);
-
-  function addItem(item) {
-    item.id = uuid();
-    item.complete = false;
-    setList([...list, item]);
+  const [formData, setFormData] = useState({
+    id: uuid(),
+    details: '',
+    assignee: '',
+    difficulty: difficulty,
+    complete: false,
+  })
+  console.log(list)
+  function handleSubmit(e) {
+    e.preventDefault();
+    setList([...list, formData]);
+    setFormData({
+      id: uuid(),
+      details: '',
+      assignee: '',
+      difficulty: difficulty,
+      complete: false,
+    })
   }
-
+  function handleChange(e) {
+    const {name, value} = e.target;
+    setFormData({...formData, [name]: value});
+  }
   function deleteItem(id) {
     const items = list.filter((item) => item.id !== id);
     setList(items);
@@ -55,7 +69,8 @@ const ToDo = () => {
             <span>To Do Item</span>
             <input
               onChange={handleChange}
-              name="text"
+              value={formData.details}
+              name="details"
               type="text"
               placeholder="Item Details"
             />
@@ -66,6 +81,7 @@ const ToDo = () => {
             <input
               onChange={handleChange}
               name="assignee"
+              value={formData.assignee}
               type="text"
               placeholder="Assignee Name"
             />
@@ -73,11 +89,12 @@ const ToDo = () => {
           <label>
             <span>Difficulty</span>
             <Slider
-              defaultValue={difficulty}
+              value={formData.difficulty}
               min={1}
               max={5}
               label={null}
               name="difficulty"
+              onChange={handleChange}
               styles={{
                 thumb: {
                   transition: 'opacity 150ms ease',

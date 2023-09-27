@@ -13,7 +13,7 @@ export default function ListItem({item, deleteItem}) {
           <Badge color="pink" variant="light">
             {item?.complete ? "Completed" : "Pending"}
           </Badge>
-          <Text fw={500}>Hi</Text>
+          <Text fw={500}>{item.assignee}</Text>
         </Group>
         <CloseButton variant="light" color="red" mt="0" radius="md"
           onClick={() => deleteItem(item.id)}>
@@ -21,11 +21,11 @@ export default function ListItem({item, deleteItem}) {
       </Group>
 
       <Text size="sm" c="dimmed">
-        With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-        activities on and around the fjords of Norway
+        {item.details}
       </Text>
-
-      
+      <Text size="sm" c="dimmed" className='difficulty'>
+        Difficulty: {item.difficulty}
+      </Text>
     </Card>
   );
 }
