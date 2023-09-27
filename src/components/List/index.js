@@ -29,7 +29,7 @@ export default function List({ list, toggleComplete, deleteItem }) {
         {showedList &&
           showedList.map((item, idx) => (
             <ListItem
-              key={idx}
+              key={item.id}
               item={item}
               toggleComplete={toggleComplete}
               deleteItem={deleteItem}
