@@ -1,0 +1,111 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+  color: #ededed;
+  // border-radius: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  // border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.containBTNs{
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  font-size: larger;}
+.tabContain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  font-size: larger;
+}
+.homeTab {
+  background-color: transparent;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  border: none;
+  color: white;
+  font-family: "Noto Serif", serif;
+  &:hover {
+    background-color: #5930dd;
+  }
+}
+.settingsTab {
+  background-color: transparent;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  border: none;
+  color: white;
+  font-family: "Noto Serif", serif;
+  &:hover {
+    background-color: #5930dd;
+  }
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+}
+
+.logo b {
+  font: 400 15vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #5930dd, 0 0 0.5em #5930dd,
+    0 0 0.1em #5930dd, 0 10px 3px #000;
+}
+.logo b span {
+  animation: blink linear infinite 2s;
+}
+.logo b span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}

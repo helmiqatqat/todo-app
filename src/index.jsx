@@ -1,12 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App.jsx";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+import { MantineProvider } from "@mantine/core";
+import App from "./app.jsx";
+import { BrowserRouter } from "react-router-dom";
+
+class Main extends React.Component {
+  render() {
+    return (
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </MantineProvider>
+    );
+  }
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Main />, rootElement);
