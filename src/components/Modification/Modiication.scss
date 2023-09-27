@@ -1,0 +1,109 @@
+.settingsContain {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 150px 100px 150px 100px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  h1 {
+    margin-left: 180px;
+  }
+
+  .con {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
+  }
+  .update {
+    width: 600px;
+    display: flex;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  .updatED {
+    width: 600px;
+    height: 415px;
+
+    .updatedTitle {
+      font-family: "Noto Serif", serif;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    .updatedText {
+      font-family: "Noto Serif", serif;
+      font-weight: 500;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  .mantine-q8nb9v {
+    height: 100%;
+  }
+  .mantine-1qt06jm {
+    cursor: pointer;
+  }
+  .mantine-kegijc {
+    color: white;
+  }
+  .mantine-fq3u1j {
+    color: white;
+    background-color: transparent;
+  }
+  .btnsContain {
+    display: flex;
+    gap: 10px;
+    .resetBtn {
+      width: 300px;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      color: white;
+      background-color: #22133c;
+      transition: 0.4s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: #342f46;
+      }
+    }
+    .settingsBtn {
+      width: 300px;
+      margin-top: 10px;
+      padding: 10px;
+      border: none;
+      color: white;
+      background-color: #6642dd;
+      transition: 0.4s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: #846ecf;
+      }
+    }
+  }
+}
+.alertContain{
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1;
+  .mantine-166xwy4 {
+    position: relative;
+  }
+  .mantine-1p0jinc {
+    position: relative;
+  }
+}
