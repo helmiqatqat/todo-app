@@ -1,0 +1,17 @@
+.tasks-list {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+};
+.list-container {
+  display: flex;
+  flex-flow: column;
+  padding: 20px;
+  gap: 10px;
+}
